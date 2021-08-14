@@ -1,0 +1,57 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+body{
+  background-color: #f3f3f3;
+  font-weight: 400;
+}
+header{
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px; 
+}
+
+
+.app{
+  background-color: #e5e5e5;
+}
+.hollow{
+  height: 100vh;
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  width: 480px;
+  background-color: #313131;
+  min-height: 100px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+#board{
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 70px;
+  height: 30px;
+  background-color: #f3f3f3;
+
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:10px;
+  transition: all 0.3s ease;
+}
+.newLine{
+  margin-right: 80px;
+}
+.moveElement{
+  margin-left: 80px;
+  transition: all 0.3s ease;
+}
+
