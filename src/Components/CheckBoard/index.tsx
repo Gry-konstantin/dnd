@@ -48,15 +48,32 @@ function CheckBoard(props:any){
         const card_id = e.dataTransfer.getData('card_id');
         const card:any = document.getElementById(card_id);
         if (e.target.id === "chboard"){
-            console.log(card.id.replace("card-",""),e.target)
             card.style.display = "block"
             e.target.appendChild(card);
+            streamline(card, e.target)
         }
     }
 
-    // const dragOver = (e:any) => {
-    //     e.preventDefault();
-    // }
+    function streamline(chart:any , board:any){
+        board.childNodes.forEach(( item:any ) => {
+            if(Number(item.id.replace("card-",""))+1 === Number(chart.id.replace("card-",""))) {
+                // console.log(item.id.replace("card-","") + 1, chart.id.replace("card-",""))
+                // console.log(item,chart.offsetLeft,chart.parentElement.offsetLeft)
+                setTimeout(()=>{
+                    chart.setAttribute('style','transition-duration: 1s;transform: translate(-320px, -50px);')
+                    item.setAttribute('style','margin-right:80px;')
+                },0)
+                setTimeout(()=>{
+                    item.removeAttribute('style')
+                    chart.removeAttribute('style')
+                    item.after(chart)
+                },1000)
+                return true
+            }else if (Number(chart.id.replace("card-",""))===1){
+                board.prepend(chart) 
+            }
+        })
+    }
 
     return (
         <div
@@ -64,7 +81,6 @@ function CheckBoard(props:any){
             className = {props.className}
             onDrop = {drop} 
             ref = {myRef}
-            // onDragOver = {dragOver}
         >
             {fillingCard.map((inside, index) => {
                 if (props.id === "chboard"){

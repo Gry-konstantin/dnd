@@ -10,7 +10,9 @@ const Card:React.FC<any> = (props:any) => {
             target.style.display = "none";
         }, 0);
     }
-
+    const drop = (e:any) => {
+        console.log(e.target)
+    }
 
     
 
@@ -22,7 +24,7 @@ const Card:React.FC<any> = (props:any) => {
             id={props.id}
             className = {props.className}
             draggable = {props.draggable}
-            // onDrop = {drop} 
+            onDrop = {drop} 
             onDragStart = {dragStart}
             
         >

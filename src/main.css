@@ -32,12 +32,10 @@ header{
 #board{
   margin-bottom: 50px;
 }
-
 .card {
   width: 70px;
   height: 30px;
   background-color: #f3f3f3;
-
   cursor: pointer;
   margin-top: 15px;
   border-radius: 13px;
@@ -49,6 +47,7 @@ header{
 }
 .newLine{
   margin-right: 80px;
+  transition: all 0.3s ease;
 }
 .moveElement{
   margin-left: 80px;

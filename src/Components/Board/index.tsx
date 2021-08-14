@@ -10,20 +10,6 @@ interface Position{
 }
 
 
-// const fillingCard = [
-//     {id : "card-1", text : "esse"},
-//     {id : "card-2", text : "esst",},
-//     {id : "card-3", text : "brot",},
-//     {id : "card-4", text : "essen"},
-//     {id : "card-5", text : "apfel",},
-//     {id : "card-6", text : "sie",},
-//     {id : "card-7", text : "und"},
-//     {id : "card-8", text : "hello",},
-//     {id : "card-9 ", text : "isst",},
-//     {id : "card-10", text : "einen",},
-//     {id : "card-11 ", text : "sie",}
-// ]
-
 function Board(props:any){  
 
     const myRef: RefObject<HTMLDivElement> = useRef<null | HTMLDivElement>(null);
