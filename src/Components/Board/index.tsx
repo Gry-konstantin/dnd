@@ -39,13 +39,13 @@ function Board(props:any){
         if (myRef.current !== null){
             Object.values(myRef.current.children).map((item:any)=>{
                 if (!isDrop){
-                    if (item.className == 'card moveElement'){
-                        item.classList.remove('moveElement')
+                    if (item.className == 'card moveElementLeft'){
+                        item.classList.remove('moveElementLeft')
                         item.before(card)
                         card.style.display="block"
                         isDrop = true;
-                    }else if (item.className == 'card newLine'){
-                        item.classList.remove('newLine')
+                    }else if (item.className == 'card moveElementRight'){
+                        item.classList.remove('moveElementRight')
                         item.after(card)
                         card.style.display="block"
                         isDrop = true;

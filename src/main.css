@@ -32,6 +32,9 @@ header{
 #board{
   margin-bottom: 50px;
 }
+#chboard{
+  position: relative;
+}
 .card {
   width: 70px;
   height: 30px;
@@ -43,13 +46,12 @@ header{
   justify-content: center;
   align-items: center;
   margin-left:10px;
-  transition: all 0.3s ease;
 }
-.newLine{
+.moveElementRight{
   margin-right: 80px;
   transition: all 0.3s ease;
 }
-.moveElement{
+.moveElementLeft{
   margin-left: 80px;
   transition: all 0.3s ease;
 }

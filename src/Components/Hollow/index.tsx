@@ -91,17 +91,17 @@ function Hollow(props:IProps){
         currentPosition.forEach((item:IPosition, index:number)=>{
             if (xCoord > 400 && yCoord < 45){
                 if (item.positionOX == 320){
-                    myRef.current.children[0].children[index].classList.remove('moveElement')
-                    myRef.current.children[0].children[index].classList.add('newLine')
+                    myRef.current.children[0].children[index].classList.remove('moveElementLeft')
+                    myRef.current.children[0].children[index].classList.add('moveElementRight')
                     // myRef.current.children[index].classList.remove('newLine')
                 }
-            }else if (myRef.current.children[0].children[index].classList.contains('newLine')){
-                myRef.current.children[0].children[index].classList.remove('newLine')
+            }else if (myRef.current.children[0].children[index].classList.contains('moveElementRight')){
+                myRef.current.children[0].children[index].classList.remove('moveElementRight')
             }
             else if ( yCoord > item.positionOY && yCoord < item.positionOY + item.height && xCoord < item.positionOX + item.width + 10 && xCoord>item.positionOX){
-                myRef.current.children[0].children[index].classList.add('moveElement')
+                myRef.current.children[0].children[index].classList.add('moveElementLeft')
             }else{
-                myRef.current.children[0].children[index].classList.remove('moveElement')
+                myRef.current.children[0].children[index].classList.remove('moveElementLeft')
             }
         })
     }
